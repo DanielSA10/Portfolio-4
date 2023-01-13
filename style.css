@@ -232,8 +232,9 @@ html {
     height: 2px;
     background-color: var(--whiteColor);
 }
-.projectsLine {
-    width:100%;
+.projectLine {
+    width:0%;
+    height: 2px;
     margin-left: 10rem;
     background-color: var(--whiteColor);
 }
@@ -344,7 +345,7 @@ html {
 .formAbout {
     clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
 }
-.formProject {
+.formProjects {
     clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
 }
 .formTitle {
@@ -406,7 +407,18 @@ html {
     max-width: 2000px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
-
+}
+@media (max-width:700px) {
+    .projectsContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    }
+}
+@media (max-width:500px) {
+    .projectsContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
 }
 
 .projectsCard {
@@ -454,7 +466,7 @@ html {
 }
 
 .projectsCardTitle {
-    font-size: 1.8rem;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
     letter-spacing:3px;
 }
 
@@ -598,10 +610,14 @@ html {
 
 .contactTitle{
     color: var(--whiteColor);
-    font-size: clamp(2rem, 5vw, 5rem);
-    
-
+    font-size: clamp(3rem, 5vw, 5rem);
     margin-bottom: 70px;
+}
+.contactTitleSmall {
+    font-size: clamp(1rem, 2vw, 5rem);
+}
+.contactTitleSmall span{
+    text-decoration: underline;
 }
 
 @media (min-width:800px) {
@@ -692,6 +708,6 @@ footer {
     text-align: center;
     opacity: 50%;
     color: var(--whiteColor);
-    font-size: .9rem;
+    font-size: clamp(.6rem, 2vw, .9rem);
     padding: 1rem 0rem;
 }

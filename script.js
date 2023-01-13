@@ -77,7 +77,7 @@ aboutMeTl.to(".aboutLine", {
 })
 aboutMeTl.from(".formAbout", {
   'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-}, "<.2")
+}, "<.4")
 
 aboutMeTl.from(".aboutMeInfo", {
   duration: .9,
@@ -152,45 +152,61 @@ stackTl.from(".wordpress",{
 
 
 
-// const projectsTl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: "#projects",
-//     markers: true,
-//     start: "top 50%",
-//     end: "top 50%",
-//   },
-// });
+const formprojectsTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".card",
+    markers: true,
+    start: "top bottom"
+  },
+});
+
+formprojectsTl.to(".projectLine", {
+  duration: .9,
+  width: "80%",
+  ease: Power2.easeOut 
+})
+formprojectsTl.from(".formProjects", {
+  'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
+}, "<.4")
+
+const projectsTl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".form",
+    markers: true,
+    start: "top bottom"
+  },
+});
 
 
+projectsTl.from(".projectWordpress",{ 
+  duration: .9,
+  delay: 1,
+  'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
+  ease: Power2.easeOut 
+});
+projectsTl.from(".projectBankDashBoard",{ 
+  duration: .9,
+  'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
+  ease: Power2.easeOut 
+}, "<.4");
 
-// projectsTl.from(".projectWordpress",{ 
-//   duration: .9,
-//   'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
-//   ease: Power2.easeOut 
-// });
-// projectsTl.from(".projectBankDashBoard",{ 
-//   duration: .9,
-//   'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
-//   ease: Power2.easeOut 
-// }, "<.4");
 
+const projects2Tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".form",
+    markers: false,
+    start: "top 30%",
+    end: "top 60%",
+  },
+});
 
-// const projects2Tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: "#projects",
-//     markers: true,
-//     start: "top 50%",
-//     end: "top 60%",
-//   },
-// });
-
-// projects2Tl.from(".projectWeatherApp",{ 
-//   duration: .9,
-//   'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
-//   ease: Power2.easeOut 
-// });
-// projects2Tl.from(".projectElse",{ 
-//   duration: .9,
-//   'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
-//   ease: Power2.easeOut 
-// }, "<.4");
+projects2Tl.from(".projectWeatherApp",{ 
+  duration: .9,
+  'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
+  ease: Power2.easeOut 
+});
+projects2Tl.from(".projectElse",{ 
+  duration: .9,
+  'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
+  ease: Power2.easeOut 
+}, "<.4");
