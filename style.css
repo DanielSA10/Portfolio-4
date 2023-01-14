@@ -209,7 +209,7 @@ html {
     margin-bottom: 10px;
 }
 .subTitleIcons {
-    font-size: 2.5rem;
+    font-size: 2rem;
     
 }
 .subTitleIcons .fa-brands {
@@ -235,7 +235,6 @@ html {
 .projectLine {
     width:0%;
     height: 2px;
-    margin-left: 10rem;
     background-color: var(--whiteColor);
 }
 
@@ -288,8 +287,8 @@ html {
         width:0%;
         margin-left: 10rem;
     }
-    .projectsLine {
-        width:100%;
+    .projectLine {
+        width:0%;
         margin-left: 10rem;
     }
 }
@@ -336,7 +335,7 @@ html {
 .html, .css, .js, .react, .figma, .git, .wordpress {
     clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
 }
-.projectWordpress, .projectBankDashBoard, .projectWeatherApp, .projectElse {
+.projectWordpress, .projectBankDashBoard, .projectWeatherApp, .projectPortfolio {
     clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
 }
 .aboutMeInfo, .aboutMeImg {
@@ -467,17 +466,18 @@ html {
 
 .projectsCardTitle {
     font-size: clamp(1.5rem, 3vw, 1.8rem);
-    letter-spacing:3px;
+    letter-spacing:2px;
 }
 
 .projectImg {
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .projectsImg img {
     width:100%;
     height:auto;
 }
+
 .projectsCardInfo {
     display: flex;
     flex-direction: column;
@@ -568,7 +568,6 @@ html {
     }
     .projectsImg {
         width:60%;
-        
     }
     .projectsCardHeader {
         display: flex;

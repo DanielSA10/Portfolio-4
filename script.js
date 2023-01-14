@@ -44,6 +44,9 @@ viewCodeBtn.forEach((viewBtn) =>
 
 //DOM ANIMATION - HERO
 
+
+
+
 let tl = gsap.timeline({ defaults: {ease:"power4.inOut", duration: 1,}})
 //hero & navBar
 tl.from('.formWrapper', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', y: 0}, '<.3')
@@ -60,6 +63,8 @@ tl.from('.formBrands', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
 //DOM ANIMATION - SCROLLTRIGGER
 
 gsap.registerPlugin(ScrollTrigger);
+
+
 
 const aboutMeTl = gsap.timeline({
   scrollTrigger: {
@@ -155,7 +160,7 @@ stackTl.from(".wordpress",{
 const formprojectsTl = gsap.timeline({
   scrollTrigger: {
     trigger: ".card",
-    markers: true,
+    markers: false,
     start: "top bottom"
   },
 });
@@ -172,7 +177,7 @@ formprojectsTl.from(".formProjects", {
 const projectsTl = gsap.timeline({
   scrollTrigger: {
     trigger: ".form",
-    markers: true,
+    markers: false,
     start: "top bottom"
   },
 });
@@ -205,8 +210,9 @@ projects2Tl.from(".projectWeatherApp",{
   'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
   ease: Power2.easeOut 
 });
-projects2Tl.from(".projectElse",{ 
+projects2Tl.from(".projectPortfolio",{ 
   duration: .9,
   'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
   ease: Power2.easeOut 
 }, "<.4");
+
