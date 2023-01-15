@@ -54,7 +54,7 @@ tl.to('.wrapper', {
   padding: "3rem",
   width: "95vw"
 }, "<.6")
-tl.from('.navLinksDesktop li', {y: '-350%', stagger:.2 }, '<.4')
+tl.from('.navLinksDesktop li', {y: '-360%', stagger:.2 }, '<.4')
 tl.from('.navBar img', {x:'-150%', duration: 2}, '<.1')
 tl.from('.formTitle', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', y: 0}, '<.2')
 tl.from('.formTitleText', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', y: 0}, '<.3')
@@ -89,13 +89,13 @@ mm.add("(min-width: 800px)", () => {
   });
   
   aboutMeTl.to(".aboutLine", {
-    duration: .6,
+    duration: .8,
     width: "80%",
     ease: Power2.easeOut 
   })
   aboutMeTl.from(".formAbout", {
     'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-  }, "<.4")
+  }, "<.3")
   
   aboutMeTl.from(".aboutMeInfo", {
     duration: .9,
@@ -104,7 +104,7 @@ mm.add("(min-width: 800px)", () => {
   aboutMeTl.from(".aboutMeImg", {
     duration: .9,
     'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
-  }, "<.4")
+  }, "<.3")
   
   
   
@@ -179,7 +179,7 @@ mm.add("(min-width: 800px)", () => {
   });
   
   formprojectsTl.to(".projectLine", {
-    duration: .9,
+    duration: .8,
     width: "80%",
     ease: Power2.easeOut 
   })
