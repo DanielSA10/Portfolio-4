@@ -252,7 +252,8 @@ html {
 
 }
 .aboutMeText p {
-    max-width: 400px;
+    max-width: 800px;
+    line-height: 35px;
 }
 
 .aboutMeImg {
