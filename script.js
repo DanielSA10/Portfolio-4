@@ -64,6 +64,7 @@ tl.from('.formBrands', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
 
 gsap.registerPlugin(ScrollTrigger);
 
+
 let mm = gsap.matchMedia();
 
 // mm.add("(min-width: 800px)", () => {
@@ -167,7 +168,7 @@ mm.add("(min-width: 800px)", () => {
     y: 0,
     ease: Power2.easeOut 
   },"<.2");
-  
+
   
   
   const formprojectsTl = gsap.timeline({
@@ -230,7 +231,6 @@ mm.add("(min-width: 800px)", () => {
   }, "<.4");
   
 })
-
 
 
 
