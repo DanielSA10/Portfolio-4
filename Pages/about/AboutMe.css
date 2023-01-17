@@ -39,7 +39,7 @@ html {
 
 .hamburger {
     cursor: pointer;
-    z-index:1;
+    z-index:4;
 }
 
 .line {
@@ -60,13 +60,13 @@ html {
 .hamburger.active .line:nth-child(1){
     background-color: #000;
     transform: translateY(8px) rotate(45deg);
-    transition: all .2s ease-in-out;
+    transition: all .5s ease-in-out;
     height:4px;
 }
 .hamburger.active .line:nth-child(3){
     background-color: #000;
     transform: translateY(-8px) rotate(-45deg);
-    transition: all .2s ease-in-out;
+    transition: all .5s ease-in-out;
     height:4px;
 }
 
@@ -78,7 +78,7 @@ html {
     position: absolute;
     transition: .5s ease-in-out;
     top:0;
-    right: -100%;
+    right: 100%;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -89,6 +89,7 @@ html {
 .navLinks.active {
     transition: .5s ease-in-out;
     right:0%;
+    z-index: 2;
 }
 
 
@@ -165,7 +166,7 @@ html {
     padding: 2rem;
 }
 /*WRAPPER RESPONSIVE****************************************/
-@media (min-width:400px) {
+@media (min-width:220px) {
     .wrapper {
         width:0vw; /*95vw this*/
         margin: 0 auto;

@@ -123,7 +123,13 @@ mm.add("(min-width: 800px)", () => {
     y: 0
   })
   
-  
+  stackTl.from(".wordpress",{ 
+    duration: .4,
+    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
+    y: 0,
+    ease: Power2.easeOut 
+  },"<.2");
+
   stackTl.from(".html", {
     duration: .4,
     'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
@@ -157,12 +163,6 @@ mm.add("(min-width: 800px)", () => {
     ease: Power2.easeOut 
   },"<.2");
   stackTl.from(".git",{ 
-    duration: .4,
-    'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
-    y: 0,
-    ease: Power2.easeOut 
-  },"<.2");
-  stackTl.from(".wordpress",{ 
     duration: .4,
     'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', 
     y: 0,

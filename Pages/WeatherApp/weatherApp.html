@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weatherApp.css">
+    <script src="weatherApp.js"defer></script>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="firstContainer">
+            <div class="firstContent">
+                <form>
+                    <input type="text" placeholder="Search places..." id="inputCountry">
+                    <div class="btnWrapper">
+                        <button class="inputBtn">Search</button>
+                    </div>
+                </form>
+                <div class="firstContentText">
+                   <p class="name"></p>
+                   <p class="time"></p>
+                </div>
+                <div class="firstContentDegrees">
+                    <p></p>
+                </div>
+                <div class="firstContentState">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="secondContainer">
+            <div class="secondContent">
+                <div class="highlights">
+                    <p class="hightlightsTitle">Todays hightlight</p>
+                    <div class="highlightRowOne">
+
+                    <div class="highligtCard">
+                        <div class="highligtCardTitle">
+                            <p>Chance of rain</p>
+                        </div>
+                        <div class="highligtContent">
+                            <div class="highlightInfo rainText">
+                                <p class="highlightRain"></p>
+                                <p>Status: <span class="rainSpan"></span></p>
+                            </div>
+                            <div class="highlightMeter">
+                                <div class="rainBall highlightBall"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="highligtCard">
+                        <div class="highligtCardTitle">
+                            <p>Wind Status</p>
+                        </div>
+                        <div class="highligtContent windContent">
+                            <p class="windNumber"></p> <span>/km</span>
+                        </div>
+                        <div class="windFeelsLike">
+                            <img src="compass.png" alt="">
+                            <p></p>
+                        </div>
+                    </div>
+                    <div class="highligtCard">
+                        <div class="highligtCardTitle">
+                            <p>Sunrise & Sunset</p>
+                        </div>
+                        <div class="sunrise highligtContent">
+                            <div class="rise">
+                                <img src="img/Sunset_SunRise/01d.png" alt="">
+                                <p class="riseText"></p>
+                            </div>
+                        </div>
+                        <div class="sunset">
+                            <div class="set">
+                                <img src="img/Sunset_SunRise/01n.png" alt="">
+                                <p class="setText"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlightRowTwo">
+
+
+                    <div class="highligtCard">
+                        <div class="highligtCardTitle">
+                            <p>Humidity</p>
+                        </div>
+                        <div class="highligtContent">
+                            <div class="highlightInfo">
+                                <p class="highlightHumidity"></p>
+                                <p>Status: <span class="humiditySpan"></span></p>
+                            </div>
+                            <div class="highlightMeter">
+                                <div class="humidityBall highlightBall"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="highligtCard">
+                        <div class="highligtCardTitle">
+                            <p>Visibility</p>
+                        </div>
+                        <div class="highligtContent">
+                            <div class="highlightInfo">
+                                <p class="highlightVis"></p>
+                                <p>Status: <span class="higlightSpan"></span></p>
+                            </div>
+                            <div class="highlightMeter">
+                                <div class="visBall highlightBall"></div>
+                            </div>
+                        </div>
+                    </div>                 
+                    <div class="highligtCard">
+                        <div class="highligtCardTitle">
+                            <p>UV Index</p>
+                        </div>
+                        <div class="highligtContent">
+                            <div class="highlightInfo UVText">
+                                <p class="highlightUV"></p>
+                                <p>Status: <span></span></p>
+                            </div>
+                            <div class="highlightMeter">
+                                <div class="UvBall highlightBall"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

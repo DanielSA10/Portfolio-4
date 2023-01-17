@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bankDashboard.css">
+    <script src="bankDashboard.js" defer></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <div class="mainContainer">
+                <div class="leftContent">
+                    <p class="mainAccText">Active Account</p>
+                    <div class="leftCardInfo">
+                        <p class="LeftCardInfoName">Daniel Andersen</p>
+                        <p class="LeftCardInfoNumber">1568 3268 4592 6572</p>
+                        <p class="activeCardDate">7/4 - 24</p>
+                        <div class="DisplayCardAmount">
+                            <p>Registered Cards: </p><span class="currentCardAmount">1</span><p class="currentCardAmountTop"> /4</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightContent">
+                    <div class="rightCardInfo">
+                        <p class="mainAccText">Available Balance</p>
+                        <p class="mainAccSpan">$ <span class="balanceValue rightContentBalance">5000</span></p>
+                        <button class="transferBtn">Transfer Money</button>
+                    </div>
+                </div>
+                <dialog class="rightContentModal" method="dialog">
+                    <form>
+                        <label>Transfer<input type="number" placeholder="Specify Amount" class="rightContentInputBalance"></label>
+                        <button class="rightContentFormSubmit" type="submit">Submit</button>
+                    </form>
+                </dialog>
+            </div>
+            
+        </div>
+
+        <div class="cardAccount">
+            <button class="openModal">Add Card</button>
+        <dialog class="modal" method="dialog">
+            <form>
+
+                <label>Your name<input type="text" placeholder="Name" class="inputName"></label>
+                <label>Card Number<input type="text" placeholder="card number" class="inputNumber"></label>
+                <label>Card Date<input type="datetime" placeholder="date" class="inputDate"></label>
+                <label>Balance<input type="number" placeholder="Specify Amount" class="inputBalance"></label>
+
+                <button class="formSubmit" type="submit">Submit</button>
+            </form>
+        </dialog>
+
+        <div class="output">
+            <div class="listWrapper">
+                <div class="listInfo">
+                    <p>Name: </p>
+                    <p>Number: </p>
+                    <p>Date: </p>
+                    <p>Balance: </p>
+                </div>
+                <div class="list">
+                    <p>Daniel Stanley Andersen</p>
+                    <p>1568 3268 4592 6572</p>
+                    <p>7/4 - 24</p>
+                    <p class="cardBalanceValue">5000</p>
+                </div>
+                <button class="deleteBtn">X</button>
+            </div>
+        </div>
+        </div>
+        
+        
+        <div class="transactionsMenu">
+            <div class="transContainer" >
+                <div class="transTitle" >
+                    <p>Latest Transactions</p>
+                </div>
+            </div>
+
+            <button class="transBtn">Make transaction</button>
+            <dialog class="transModal" method="dialog">
+                <form>
+    
+                    <label>Description<input type="text" placeholder="Name" class="inputTransType"></label>
+                    <!-- <label>Payment or Transfer <input type="text" placeholder="Specify type of transaction..." class="inputPayOrTrans"></label> -->
+                    <label for="options" >Payment or Transfer 
+                        <select class="inputPayOrTrans" name="cars">
+                          <option value="Payment">Payment</option>
+                          <option value="Transfer">Transfer</option>
+                        </select>
+                      </label>
+                    <label>Amount <input type="number" placeholder="Specify Amount.." class="inputTransNumber"></label>
+    
+                    <button class="formTransSubmit" type="submit">Submit</button>
+                </form>
+            </dialog>
+        
+            <div class="transInfo">
+                <p>Date</p>
+                <p class="transInfoBorder">Description</p>
+                <p class="transInfoBorder">Payment/Transfer</p>
+                <p class="transInfoBorder">Amount</p>
+            </div>
+
+            <div class="transOutput"></div>
+        </div>
+    </div>
+</body>
+</html>

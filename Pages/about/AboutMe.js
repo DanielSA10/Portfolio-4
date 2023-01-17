@@ -1,3 +1,12 @@
+let hamburger = document.querySelector('.hamburger')
+let navLinks = document.querySelector('.navLinks')
+let hamburgerLine = document.querySelectorAll('.line')
+
+hamburger.addEventListener('click', function() {
+    navLinks.classList.toggle('active')
+    hamburger.classList.toggle('active')
+})
+
 // DOM ANIMATION
 
 let tl = gsap.timeline({ defaults: {ease:"power4.inOut", duration: 1,}})
