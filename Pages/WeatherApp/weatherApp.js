@@ -2,26 +2,6 @@ let inputBtn = document.querySelector('.inputBtn')
 let inputCountry = document.querySelector('#inputCountry')
 inputCountry.value = ""
 
-//Functions
-function handleDate() {
-    let today = new Date();
-    let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    let timer = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    let dateTime = date+' '+timer;
-    
-    console.log(parseInt(dateTime.substring(10)))
-    let wrapper = document.querySelector('.wrapper')
-    if(parseInt(dateTime.substring(10)) < 09) {
-        wrapper.style.backgroundImage = "url(img/Morning/morning.jpg)"
-    } else if (parseInt(dateTime.substring(10)) < 17) {
-        wrapper.style.backgroundImage = "url(img/Midday/midday.jpg)"
-    } else if (parseInt(dateTime.substring(10)) < 21) {
-        wrapper.style.backgroundImage = "url(img/Evening/evening.jpg)"
-    } else {
-        wrapper.style.backgroundImage = "url(img/Night/night.jpg)"
-    }
-}
-
 inputBtn.addEventListener('click', e => {
     e.preventDefault()
     const options = {
@@ -36,6 +16,7 @@ inputBtn.addEventListener('click', e => {
         .then(response => response.json())
         .then(response => {
             console.log(response)
+            console.log(response.location.localtime.substring(11))
         
         //First Container
             let name = document.querySelector('.name')
@@ -47,7 +28,19 @@ inputBtn.addEventListener('click', e => {
             firstContentState.innerText = response.current.condition.text
             temperature.innerText = Math.floor(response.current.temp_c) + '°'
             
-            handleDate()
+
+            //Dynamic background based on location time
+            let wrapper = document.querySelector('.wrapper')
+        
+            if(parseInt(response.location.localtime.substring(11)) <= 09) {
+                wrapper.style.backgroundImage = "url(img/Morning/morning.jpg)"
+            } else if (parseInt(response.location.localtime.substring(11)) <= 17) {
+                wrapper.style.backgroundImage = "url(img/Midday/midday.jpg)"
+            } else if (parseInt(response.location.localtime.substring(11)) <= 21) {
+                wrapper.style.backgroundImage = "url(img/Evening/evening.jpg)"
+            } else {
+                wrapper.style.backgroundImage = "url(img/Night/night.jpg)"
+            }
     
     
         //Second Container

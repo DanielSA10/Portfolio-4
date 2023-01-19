@@ -17,6 +17,16 @@ body {
     align-items: center;
 }
 
+.inputBtn {
+    cursor: pointer;
+    transition: background-color .1s ease-in-out;
+}
+.inputBtn:hover {
+    background-color: rgb(233, 233, 233);
+    transition: background-color .1s ease-in-out;
+    cursor: pointer;
+}
+
 .wrapper {
     width:90vw;
     max-width: 80rem;
@@ -60,7 +70,7 @@ input {
 
 .firstContentText {
     padding: 2rem 0rem;
-    color: #000;
+    color: #fff;
 }
 
 .name {

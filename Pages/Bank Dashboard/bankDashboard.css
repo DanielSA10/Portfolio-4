@@ -11,6 +11,23 @@ body {
     background-color: #ddd;
 }
 
+button:hover {
+    background-color: rgb(98, 108, 204);
+    transition: all .2s ease-in-out;
+    color: #fff;
+}
+
+dialog button {
+    cursor: pointer;
+    border: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+dialog {
+    border: none;
+    border-radius: 10px;
+}
 .wrapper {
     /* width:100vw; */
     padding: 2rem;
@@ -81,6 +98,7 @@ body {
 
 .transferBtn {
     background-color: rgb(80, 92, 201);
+    transition: all .2s ease-in-out;
     border: none;
     border-radius: 10px;
     padding: .8rem 1.5rem;
@@ -113,6 +131,7 @@ body {
 }
 .openModal{
     background-color: rgb(80, 92, 201);
+    transition: all .2s ease-in-out;
     border: none;
     border-radius: 10px;
     padding: .8rem 1.5rem;
@@ -190,7 +209,12 @@ label {
     }
 }
 
-
+.deleteBtn {
+    border: none;
+    padding: 2px;
+    border-radius: 5px;
+    cursor:pointer;
+}
 
 
 
@@ -212,6 +236,7 @@ label {
 
 .transBtn {
     background-color: rgb(80, 92, 201);
+    transition: all .2s ease-in-out;
     border: none;
     border-radius: 10px;
     padding: .8rem 1.5rem;
@@ -219,7 +244,18 @@ label {
     cursor: pointer;
 }
 
-
+select {
+    background-color: rgb(80, 92, 201);
+    border: none;
+    padding: 5px 10px;
+    color: rgb(245, 245, 245);
+    border-radius: 5px;
+    cursor: pointer;
+}
+select:hover {
+    background-color: rgb(98, 108, 204);
+    transition: all .2s ease-in-out;
+}
 
 .transInfo {
     padding-top: 50px;
@@ -266,3 +302,4 @@ label {
 .transTypeStyling p {
 
 }
+
