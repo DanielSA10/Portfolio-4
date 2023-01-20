@@ -3,6 +3,10 @@ let inputCountry = document.querySelector('#inputCountry')
 inputCountry.value = ""
 
 inputBtn.addEventListener('click', e => {
+    if(inputCountry.value === "") {
+        alert('Please enter a destination')
+    } else {
+
     e.preventDefault()
     const options = {
         method: 'GET',
@@ -90,7 +94,7 @@ inputBtn.addEventListener('click', e => {
             } else if (response.current.humidity <= 60) {
                 humidity.innerText = response.current.humidity + '%'
                 humidityBall.classList.add('top')
-                humidityText.innerText = 'Comfortable'
+                humidityText.innerText = 'Good'
                 humidityText.style.color = '#4d76e7'
             } else {
                 humidity.innerText = response.current.humidity + '%'
@@ -142,4 +146,5 @@ inputBtn.addEventListener('click', e => {
                 qualityText.style.color = '#e23131'
             }
         })
+    }
 })

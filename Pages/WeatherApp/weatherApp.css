@@ -129,11 +129,8 @@ input {
     opacity: 70%;
 }
 
-.highlightVis, .highlightHumidity {
+.highlightVis, .highlightHumidity, .highlightRain,.highlightUV {
     padding-bottom: 50px;
-}
-
-.highlightUV {
     padding-bottom: 30px;
 }
 
@@ -215,6 +212,7 @@ input {
     .highlightRowOne, .highlightRowTwo {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
     }
 }
 

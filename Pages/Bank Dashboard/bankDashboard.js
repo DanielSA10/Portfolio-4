@@ -41,7 +41,11 @@ btnClose.addEventListener('click', (e) => {
     
     if(output.children.length === 4) {
         alert('no more than 4 cards')
-    } else {
+    } 
+    else if(inputName.value === "" || number.value === "" || date.value === "" ||balance.value === "") {
+        alert('please fill out all the fields!')
+    }
+    else {
         e.preventDefault()
         
         console.log(inputName.value)
@@ -92,7 +96,7 @@ btnClose.addEventListener('click', (e) => {
         dateText.innerText = date.value
         list.append(dateText)
         let BalanceText = document.createElement('p')
-        BalanceText.innerText = balance.value + "$"
+        BalanceText.innerText = "$" + balance.value
         list.append(BalanceText)
         
         //deleteBtn
