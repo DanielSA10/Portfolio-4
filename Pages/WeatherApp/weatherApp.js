@@ -62,7 +62,7 @@ inputBtn.addEventListener('click', e => {
                 rainStatus.innerText = response.forecast.forecastday[0].day.daily_chance_of_rain + '%';
                 rainBall.classList.add('mid')
                 rainText.innerText = 'Good'
-                rainText.style.color = '#fbdf4d'
+                rainText.style.color = 'Orange'
             } else if (response.forecast.forecastday[0].day.daily_chance_of_rain > 50) {
                 rainStatus.innerText = response.forecast.forecastday[0].day.daily_chance_of_rain + '%';
                 rainBall.classList.add('Top')
@@ -116,7 +116,7 @@ inputBtn.addEventListener('click', e => {
                 visibility.innerText = response.current.vis_km + '/km';
                 visBall.classList.add('mid')
                 visText.innerText = 'Fine'
-                visText.style.color = '#fbdf4d'
+                visText.style.color = 'Orange'
             } else {
                 visBall.classList.add('bot')
                 visibility.innerText = response.current.vis_km + '/km';
@@ -138,7 +138,7 @@ inputBtn.addEventListener('click', e => {
                 UV.innerText = response.current.uv
                 uvBall.classList.add('mid')
                 qualityText.innerText = 'Fine'
-                qualityText.style.color = '#fbdf4d'
+                qualityText.style.color = 'Orange'
             } else{
                 UV.innerText = response.current.uv
                 uvBall.classList.add('bot')

@@ -162,9 +162,6 @@ formTransSubmit.addEventListener('click', (e, value) => {
             const balanceValue = Number(amountOfBalance.innerText) + Number(value)
             amountOfBalance.innerText = balanceValue
             cardBalanceValue.innerText = balanceValue
-        } else {
-            //Bug: items still get appended to page
-            return;
         }
     })
 
