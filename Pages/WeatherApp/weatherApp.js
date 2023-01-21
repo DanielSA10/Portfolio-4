@@ -38,10 +38,16 @@ inputBtn.addEventListener('click', e => {
         
             if(parseInt(response.location.localtime.substring(11)) <= 09) {
                 wrapper.style.backgroundImage = "url(img/Morning/morning.jpg)"
+                name.style.color = "#333333"
+                time.style.color = "#333333"
             } else if (parseInt(response.location.localtime.substring(11)) <= 17) {
                 wrapper.style.backgroundImage = "url(img/Midday/midday.jpg)"
+                name.style.color = "#333333"
+                time.style.color = "#333333"
             } else if (parseInt(response.location.localtime.substring(11)) <= 21) {
                 wrapper.style.backgroundImage = "url(img/Evening/evening.jpg)"
+                name.style.color = "#fff"
+                time.style.color = "#fff"
             } else {
                 wrapper.style.backgroundImage = "url(img/Night/night.jpg)"
             }
@@ -89,7 +95,7 @@ inputBtn.addEventListener('click', e => {
             if(response.current.humidity <= 20) {
                 humidity.innerText = response.current.humidity + '%'
                 humidityBall.classList.add('mid')
-                humidityText.innerText = 'dry'
+                humidityText.innerText = 'dry '
                 humidityText.style.color = '#e23131'
             } else if (response.current.humidity <= 60) {
                 humidity.innerText = response.current.humidity + '%'
@@ -99,7 +105,7 @@ inputBtn.addEventListener('click', e => {
             } else {
                 humidity.innerText = response.current.humidity + '%'
                 humidityBall.classList.add('bot')
-                humidityText.innerText = 'Wet'
+                humidityText.innerText = 'Wet '
                 humidityText.style.color = '#e23131'
             }
            
