@@ -62,7 +62,7 @@ inputBtn.addEventListener('click', e => {
             if(response.forecast.forecastday[0].day.daily_chance_of_rain <= 0) {
                 rainStatus.innerText = response.forecast.forecastday[0].day.daily_chance_of_rain + '%';
                 rainBall.classList.add('bot')
-                rainText.innerText = 'Bad'
+                rainText.innerText = 'Low'
                 rainText.style.color = '#e23131'
             } else if (response.forecast.forecastday[0].day.daily_chance_of_rain <=50) {
                 rainStatus.innerText = response.forecast.forecastday[0].day.daily_chance_of_rain + '%';

@@ -223,7 +223,7 @@ html {
 
 .aboutMeTitle p, .projectsTitle p {
     color: var(--whiteColor);
-    font-size: 4rem;
+    font-size: clamp(3rem, 2vw, 4rem);
     font-weight: 600;
     position: relative;
 }
@@ -287,13 +287,23 @@ html {
         flex-direction: row;
     }
     .aboutMeTitle p, .projectsTitle p {
-        padding-left: 10rem;
+        padding-left: 0rem;
     }
     .aboutLine {
         width:0%;
-        margin-left: 10rem;
+        margin-left: 0rem;
     }
     .projectLine {
+        width:0%;
+        margin-left: 10rem;
+    }
+}
+
+@media (min-width:1400px) {
+        .aboutMeTitle p, .projectsTitle p {
+        padding-left: 10rem;
+    }
+    .aboutLine {
         width:0%;
         margin-left: 10rem;
     }
