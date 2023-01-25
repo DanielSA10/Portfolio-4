@@ -54,6 +54,7 @@ tl.to('.wrapper', {
   padding: "3rem",
   width: "95vw"
 }, "<.6")
+tl.from('.hamburger', {y: '-360%', stagger:.2 }, '<.3')
 tl.from('.navLinksDesktop li', {y: '-360%', stagger:.2 }, '<.4')
 tl.from('.navBar img', {x:'-150%', duration: 2}, '<.1')
 tl.from('.formTitle', { 'clip-path': 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)', y: 0}, '<.2')
